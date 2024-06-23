@@ -1,0 +1,339 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap'); 
+
+
+*{
+    margin: 0;
+    padding: 0;
+     box-sizing: border-box;
+    font-family: 'poppins','sans-serif';  
+}
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 10%;
+    background: transparent;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+    background-image: linear-gradient(90deg, #00b7ff, #016389, #012635); 
+}
+
+.logo {
+    font-size: 35px;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+    cursor: default;
+    opacity: 0;
+    animation: slideRight 1s ease forwards;
+}
+
+.navbar a{
+    display: inline-block;
+    font-size: 25px;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+    margin-left: 20px;
+    transition: 2s;
+    opacity: 0;
+    animation: slideTop 5s ease forwards;
+    animation-delay: calc(.2s * var(--i));
+   
+    
+}
+
+.navbar a:hover,
+.navbar a.active{
+    color: rgb(0, 247, 255);
+}
+
+.home {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding:  70px 10% 0;
+    background-color: aliceblue;
+}
+.home-content { 
+    max-width: 600px;
+}
+.home-content h1{
+    font-size: 60px;
+    font-weight: 700;
+    color: #016389;
+    
+    opacity: 0;
+    animation: slideBottom 1s ease forwards;
+    animation-delay: .3s;
+    
+}
+.home-content h1:nth-of-type(2){
+    margin-bottom: 20px;
+    animation: slideTop 1s ease forwards;
+    animation-delay: .4s;
+   
+}
+
+.sp{
+    color: #016389;
+    font-size: 20px;
+    opacity: 0;
+    animation: slideBottom 1s ease forwards;
+    animation-delay: .3s;
+
+}
+.home-content h3 span {
+    color: #00b7ff;
+    opacity: 0;
+    animation: slideBottom 1s ease forwards;
+    animation-delay: .3s;
+}
+
+
+.home-content h2{
+    font-size: 30px;
+    font-weight: 700;
+    margin: -3px 0;
+    color: #00b7ff;
+    font-style: italic;
+    opacity: 0;
+    animation: slideRight 1s ease forwards;
+    animation-delay: 1s;
+    
+}
+
+.home-content p {
+    font-size: 16px;
+    opacity: 0;
+    animation: slideLeft 1s ease forwards;
+    animation-delay: 1s;
+   
+}
+.home-img img{
+    max-width: 450px;
+    margin-right: -20px;
+    opacity: 0;
+    animation: zoomIn 1s ease forwards;
+    animation-delay: 1s;
+}
+
+.social-media a{
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    background: transparent;
+    border: 2px solid #016389 ;
+   
+    border-radius: 50%;
+    font-size: 20px;
+    color: #016389;
+    text-decoration: none;
+    margin: 30px 15px 30px 0;
+    transition: .5s ease;
+    opacity: 0;
+    animation: slideLeft 1s ease forwards;
+    animation-delay: calc(.2s * var(--i));
+}
+
+.social-media a:hover{
+    background: #016389;
+    color: #1f242d;
+    box-shadow: 0 0 20px #016389;
+}
+
+.btn{
+    display: inline-block;
+    padding: 10px 28px;
+    background: #016389;
+    border-radius: 35px;
+    box-shadow: 0 0 10px #016389;
+    font-size: 16px;
+    color:#00b7ff;
+    letter-spacing: 1px;
+    text-decoration: none;
+    font-weight: 600;
+    opacity: 0;
+    animation: slideTop 1s ease forwards;
+    animation-delay: 2s;
+}
+
+.footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 10%;
+    background: transparent;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+    background-image: linear-gradient(90deg, #00b7ff, #016389, #012635); 
+}
+
+#dateTime{
+    display: inline-block;
+    font-size: 15px;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+    margin-left: 85%;
+    transition: 2s;
+    opacity: 0;
+    animation: slideTop 3s ease forwards;
+    animation-delay: calc(.2s * var(--i));
+}
+
+.menu-toggle {
+    display: none;
+    font-size: 20px; 
+    color: #fff;
+}
+
+.menu-toggle.active .fa-bars {
+    display: none;
+}
+
+.menu-toggle.active .fa-times {
+    display: block;
+}
+
+
+
+@keyframes slideRight {
+    0% {
+        transform: translateX(-100px);
+        opacity: 0;
+    }
+    100%{
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideLeft {
+    0% {
+        transform: translateX(100px);
+        opacity: 0;
+    }
+    100%{
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideTop {
+    0% {
+        transform: translateY(100px);
+        opacity: 0;
+    }
+    100%{
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideBottom {
+    0% {
+        transform: translateY(100px);
+        opacity: 0;
+    }
+    100%{
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes zoomIn {
+    0% {
+        transform: scale(0);
+        opacity: 0;
+    }
+    100%{
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+
+@media (max-width: 768px) {
+    .header {
+        padding: 20px 5%;
+    }
+
+    .navbar {
+        position: fixed;
+        top: 0;
+        left: -100%;
+        width: 50%;
+        height: 100%;
+        background: #012635;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        transition: 0.5s;
+    }
+
+    .navbar.active {
+        left: 0;
+    }
+
+    .navbar a {
+        margin: 10px 0;
+        font-size: 20px;
+        opacity: 1;
+        animation: none;
+    }
+
+    .menu-toggle {
+        display: block;
+        cursor: pointer;
+    }
+
+    .menu-toggle.active .fa-bars {
+        display: none;
+    }
+
+    .menu-toggle.active .fa-times {
+        display: block;
+    }
+    .home {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .home-content {
+        max-width: 100%;
+    }
+
+    .home-img img {
+        max-width: 80%;
+        margin-top: 20px;
+    }
+
+}
+
+.fa-times {
+    display: none;
+}
+
+.menu-toggle.active .fa-bars {
+    display: none;
+}
+
+.menu-toggle.active .fa-times {
+    display: block;
+}
+
+

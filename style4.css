@@ -1,0 +1,227 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap'); 
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 10%;
+    background: transparent;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+    background-image: linear-gradient(90deg, #00b7ff, #016389,#012635);
+    box-sizing: border-box;
+    font-family: 'poppins','sans-serif';  
+}
+.logo {
+    font-size: 35px;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+    cursor: default;
+} 
+
+.navbar a{
+    display: inline-block;
+    font-size: 25px;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+    margin-left: 20px;
+    transition: 2s;
+    opacity: 0;
+    animation: slideTop 5s ease forwards;
+    animation-delay: calc(.2s * var(--i));
+   
+    
+}
+
+.navbar a:hover,
+.navbar a.active{
+    color: rgb(0, 247, 255);
+}
+
+.menu-toggle {
+    display: none;
+    font-size: 20px; 
+    color: #fff;
+}
+
+.menu-toggle.active .fa-bars {
+    display: none;
+}
+
+.menu-toggle.active .fa-times {
+    display: block;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-image: url('health.webp'); 
+    background-repeat:no-repeat ;
+    background-size: cover;
+    background-position: center;
+    height: 100%;
+}
+h2{
+    margin-top: 100px;
+    margin-bottom: 20px;
+    text-align: center;
+    font-size: 30px;
+}
+
+form {  
+    max-width: 400px;
+    margin: 40px auto;
+    background-color: rgba(148, 235, 238, 0.8); 
+    padding: 20px;
+    border-radius: 10px;
+    font-size: 15px;
+}
+
+ input[type="text"],
+ input[type="email"],
+select,
+input[type="date"],
+input[type="time"],
+button {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #016389;
+    border-radius: 4px;
+    box-sizing: border-box;
+} 
+
+button {
+    background-color: #016389;
+    font-size: 15px;
+    color: white;
+    padding: 15px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #012635;
+}
+
+@media (max-width: 768px) {
+    .header {
+        padding: 20px 5%;
+    }
+
+    .navbar {
+        position: fixed;
+        top: 0;
+        left: -100%;
+        width: 50%;
+        height: 100%;
+        background: #012635;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        transition: 0.5s;
+    }
+
+    .navbar.active {
+        left: 0;
+    }
+
+    .navbar a {
+        margin: 10px 0;
+        font-size: 20px;
+        opacity: 1;
+        animation: none;
+    }
+
+    .menu-toggle {
+        display: block;
+        cursor: pointer;
+    }
+
+    .menu-toggle.active .fa-bars {
+        display: none;
+    }
+
+    .menu-toggle.active .fa-times {
+        display: block;
+    }
+}
+
+.fa-times {
+    display: none;
+}
+
+.menu-toggle.active .fa-bars {
+    display: none;
+}
+
+.menu-toggle.active .fa-times {
+    display: block;
+}
+
+
+
+@keyframes slideRight {
+    0% {
+        transform: translateX(-100px);
+        opacity: 0;
+    }
+    100%{
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideLeft {
+    0% {
+        transform: translateX(100px);
+        opacity: 0;
+    }
+    100%{
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideTop {
+    0% {
+        transform: translateY(100px);
+        opacity: 0;
+    }
+    100%{
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideBottom {
+    0% {
+        transform: translateY(100px);
+        opacity: 0;
+    }
+    100%{
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes zoomIn {
+    0% {
+        transform: scale(0);
+        opacity: 0;
+    }
+    100%{
+        transform: scale(1);
+        opacity: 1;
+    }
+}

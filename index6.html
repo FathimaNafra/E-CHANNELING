@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <link rel="stylesheet" href="style6.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    
+        <header class="header">
+        
+            <a href="#" class="logo"><i class="fa-solid fa-user-doctor"></i>E-Doc</a>
+            <nav class="navbar">
+                <a href="index1.html"   style="--i:1;"  >Home</a>
+                <a href="index2.html"   style="--i:2;">About Us</a>
+                <a href="index3.html"  style="--i:3;">Services</a>
+                <a href="index7.html"  style="--i:4" >Doctors</a>
+                <a href="index4.html"  style="--i:5;">Bookings</a>
+                <a href="index5.html"  style="--i:6;">Testimonials</a>
+                <a href="index6.html"  style="--i:7;"  class="active">Contact Us</a>
+            </nav>
+            <div class="menu-toggle" id="mobile-menu">
+                <i class="fas fa-bars"></i>
+            </div>
+            
+     </header>
+     <section>
+ <div class="contactForm">
+  <form action="https://api.web3forms.com/submit" method="POST" id="contactForm">
+    <h1 class="sub-heading">Need Support!</h1>
+    <p class="para para2">
+        Contact us for a quote help to join them.
+    </p>
+
+ <!--Inputs---->
+ <input type="hidden" name="access_key" value="d36e98e0-5732-4e2f-8d0b-b46b63e579b6">
+   <div class="input-group">
+    <input id="name" type="text" class="input" placeholder="Your name" name="name1" >
+    <small class="error-message" id="nameError"></small>
+   
+   </div>
+ 
+     <div class="input-group">
+        <input id="email"  class="input" placeholder="Your email" name="email1" >
+        <small class="error-message" id="emailError"></small>
+     </div>
+ 
+<div class="input-group">
+
+    <input  id="subject"   type="text" class="input" placeholder="Your subject" name="subject1" >
+    <small class="error-message" id="subjectError"></small>
+</div>
+ 
+<div class="input-group">
+    <textarea    id="message"   class="input" cols="30" rows="5"></textarea>
+    <small class="error-message" id="messageError"></small>
+   
+</div>
+ 
+<input type="submit" class="input submit" value="send Message">
+
+
+  </form>
+
+
+  <div class="map-container">
+<div class="mapBg"></div>
+<div class="map">
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d13345.854755311537!2d80.78729403777217!3d6.029509198885235!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ae137d1a37afbab%3A0xbfd6e6052d18ef85!2sSouthern%20Lanka%20Hospitals!5e0!3m2!1sen!2slk!4v1717333889168!5m2!1sen!2slk" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+</div>
+
+
+  </div>
+
+ </div>
+ <div class="contactMethod">
+
+    <div class="method">
+        <i class="fa-solid fa-location-dot contactIcon"></i>
+        <article class="text">
+            <h1 class="sub-heading">Location</h1>
+            <p class="para">NSCTechanelling Hospital Tangalle</p>
+        </article>
+    </div>
+
+
+
+
+    <div class="method">
+        <i class="fa-regular fa-envelope contactIcon"></i>
+        <article class="text">
+            <h1 class="sub-heading">Email</h1>
+            <p class="para">NSCTechanelling@gmail.com</p>
+        </article>
+    </div>
+
+    <div class="method">
+        <i class="fa-solid fa-phone-volume contactIcon"></i>
+        <article class="text">
+            <h1 class="sub-heading">Phone</h1>
+            <p class="para">0713456789</p>
+        </article>
+    </div>
+ </div>
+    </section>
+    
+
+
+    <script src="script6.js"></script>
+</body>
+</html>

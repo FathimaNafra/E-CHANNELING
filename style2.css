@@ -1,0 +1,240 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+   
+}
+.about{
+    width: 100%;
+    height: 700px;  
+    background-image: url(health.jpeg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+}
+ .header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 10%;
+   
+    background: transparent;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+    background-image: linear-gradient(90deg, #00b7ff, #016389,#012635);
+    box-sizing: border-box;
+    font-family: 'poppins','sans-serif';
+}
+.logo {
+    font-size: 35px;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+    cursor: default;
+    opacity: 0;
+    animation: slideRight 1s ease forwards;
+}
+
+
+.navbar a{
+    display: inline-block;
+    font-size: 25px;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+    margin-left: 20px;
+    transition: 2s;
+    opacity: 0;
+    animation: slideTop 5s ease forwards;
+    animation-delay: calc(.2s * var(--i));
+   padding-right: 1px;
+    
+}
+
+.navbar a:hover,
+.navbar a.active{
+    color: rgb(0, 247, 255);
+}
+.menu-toggle {
+    display: none;
+    font-size: 20px; 
+    color: #fff;
+}
+
+.menu-toggle.active .fa-bars {
+    display: none;
+}
+
+.menu-toggle.active .fa-times {
+    display: block;
+}
+.abouta{
+    height: 25%;
+    font-size: 25px;
+    text-align: center;
+}  
+h1{
+    font-size: 55px;
+    margin-top: 80px;
+    text-align: center;
+}
+.aboutb{
+    display: flex;
+    height: 55%;
+}
+.b1{
+    width: 20%;
+    padding: 40PX;
+    margin: 10px;
+    font-size: 20px;
+    text-align: center;
+    border-radius: 10px;
+    background-color: rgba(148, 235, 238, 0.8); 
+    transition: background 0.5s,transform 0.5s;
+}
+.b1:hover{
+    background-color: #016389;
+    transform: translateY(-10px);
+}
+h3{
+    font-size: 30px;
+    text-align: center;
+}
+
+/*response*/
+@media only screen and (max-width :768px){
+    .header {
+        padding: 20px 5%;
+    }
+
+    .navbar {
+        position: fixed;
+        top: 0;
+        left: -100%;
+        width: 50%;
+        height: 100%;
+        background: #012635;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        transition: 0.5s;
+    }
+
+    .navbar.active {
+        left: 0;
+    }
+
+    .navbar a {
+        margin: 10px 0;
+        font-size: 20px;
+        opacity: 1;
+        animation: none;
+    }
+
+    .menu-toggle {
+        display: block;
+        cursor: pointer;
+    }
+
+    .menu-toggle.active .fa-bars {
+        display: none;
+    }
+
+    .menu-toggle.active .fa-times {
+        display: block;
+    }
+    .about{
+        height: 1100px;
+        background-image: url(hea.jpg);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+        
+    .aboutb{
+        display: flex;
+        flex-direction: column;
+        flex-basis: 100%;
+        width: 100%;
+    }
+    .abouta{
+        font-size: 20px;
+        height: 150px;
+    }
+    .b1{
+        width: 80%;
+        font-size: 16px;
+        margin: auto;
+        margin-bottom: 10px;
+        margin-top: 10px;
+    }
+    h1{
+        margin-top: 80px;
+       
+    }
+}
+
+
+
+
+@keyframes slideRight {
+    0% {
+        transform: translateX(-100px);
+        opacity: 0;
+    }
+    100%{
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideLeft {
+    0% {
+        transform: translateX(100px);
+        opacity: 0;
+    }
+    100%{
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideTop {
+    0% {
+        transform: translateY(100px);
+        opacity: 0;
+    }
+    100%{
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideBottom {
+    0% {
+        transform: translateY(100px);
+        opacity: 0;
+    }
+    100%{
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes zoomIn {
+    0% {
+        transform: scale(0);
+        opacity: 0;
+    }
+    100%{
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+

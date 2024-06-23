@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bookings</title>
+    <link rel="stylesheet" href="style4.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+</head>
+<body>
+    <header class="header"> 
+      <a href="#" class="logo"><i class="fa-solid fa-user-doctor"></i>E-Doc</a>
+      <nav class="navbar">
+        <a href="index1.html" style="--i:1;"  >Home</a>
+        <a href="index2.html"   style="--i:2;">About Us</a>
+        <a href="index3.html"  style="--i:3;">Services</a>
+        <a href="index7.html"  style="--i:4" >Doctors</a>
+        <a href="index4.html"  style="--i:5;" class="active">Bookings</a>
+        <a href="index5.html"  style="--i:6;">Testimonials</a>
+        <a href="index6.html"  style="--i:7;">Contact Us</a>
+    </nav>
+    <div class="menu-toggle" id="mobile-menu">
+        <i class="fas fa-bars"></i>
+    </div>
+    </header> 
+
+    <h2>Appointment Scheduling Form</h2>
+
+    <form  action="https://api.web3forms.com/submit" method="POST" id="appointmentForm">
+        <input type="hidden" name="access_key" value="d36e98e0-5732-4e2f-8d0b-b46b63e579b6">
+        <label for="patient_name">Patient Name:</label><br>
+        <input type="text" id="patient_name" name="patient_name" required><br>
+
+        <label for="email">Email</label><br>
+        <input type="email" id="email" name="email" required><br>
+        <label for="Specialization">Specialization:</label><br>
+        <select id="Specialization" name="Specialization" required>
+            <option value="" disabled selected>Select Specialization</option>
+            <option value="Gynaecologist">Gynaecologist</option>
+            <option value="Physician">Physician</option>
+            <option value="Cardiologist">Cardiologist</option>
+            <option value="Pediatrician">Pediatrician </option>
+            <option value="Eye Surgeon">Eye Surgeon </option>
+            <option value="Endocrinologist">Endocrinologist </option>
+            <option value="Neurologist">Neurologist </option>
+            <option value="Dermatologist">Dermatologist </option>
+        </select><br>
+
+        <label for="doctor">Select Doctor:</label><br>
+        <select id="doctor" name="doctor" required>
+            <option value="" disabled selected>Select Doctor</option>
+        </select><br>
+
+        <label for="appointment_date">Date:</label><br>
+        <input type="date" id="appointment_date" name="appointment_date" required><br>
+
+        <label for="appointment_time">Time:</label><br>
+        <input type="time" id="appointment_time" name="appointment_time" required><br><br>
+
+        <button type="submit">Schedule Appointment</button>
+    </form>
+
+    <script src="script4.js"></script>
+
+</body>
+</html>
